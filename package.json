@@ -68,6 +68,14 @@
     "moduleNameMapper":{
       "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
       "\\.(png|jpg|gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
     }
   }
 }
