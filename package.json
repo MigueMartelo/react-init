@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint './src/**/*.{js,jsx}'",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
   },
@@ -29,6 +31,8 @@
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
+    "@testing-library/react": "^10.4.3",
+    "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "eslint-config-prettier": "^6.11.0",
@@ -39,8 +43,10 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "sass": "^1.26.9",
@@ -56,5 +62,8 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
   }
 }
