@@ -64,6 +64,10 @@
     "*.js": "eslint --cache --fix"
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
+    "moduleNameMapper":{
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(png|jpg|gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    }
   }
 }
