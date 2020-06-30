@@ -44,7 +44,6 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
-    "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
@@ -57,15 +56,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test"
+      "pre-commit": "npm run lint && npm run test"
     }
   },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
-  },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
-    "moduleNameMapper":{
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
       "\\.(png|jpg|gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
     },
