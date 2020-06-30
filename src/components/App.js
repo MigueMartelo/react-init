@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "../assets/styles/styles.scss";
+import '../assets/styles/styles.scss';
 
-import Logo from "../assets/images/react-logo.png";
+import Logo from '../assets/images/react-logo.png';
 
 const App = ({ title }) => (
   <>
